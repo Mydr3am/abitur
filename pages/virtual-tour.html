@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виртуальная экскурсия - МГКЭИТ</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>МГКЭИТ</h1>
+                    <span>Колледж с добрым сердцем!</span>
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" class="nav-link">Главная</a>
+                    <a href="virtual-tour.html" class="nav-link active">Виртуальная экскурсия</a>
+                    <a href="classrooms.html" class="nav-link">Аудитории</a>
+                    <a href="specialties.html" class="nav-link">Специальности</a>
+                    <a href="practices.html" class="nav-link">Практики</a>
+                    <a href="career.html" class="nav-link">Карьера</a>
+                    <a href="graduates.html" class="nav-link">Выпускники</a>
+                </nav>
+                <div class="social-links">
+                    <a href="#" class="social-link">Telegram</a>
+                    <a href="#" class="social-link">VK</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Виртуальная экскурсия по колледжу</h1>
+            <p>Познакомься с нашими корпусами и аудиториями</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="tour-container">
+                <div class="tour-viewer" id="tourViewer">
+                    <div style="text-align: center; color: var(--text-light);">
+                        <h2 style="margin-bottom: 1rem;">Выберите локацию для просмотра</h2>
+                        <p>Используйте навигацию ниже для перехода между локациями</p>
+                    </div>
+                </div>
+
+                <div class="tour-controls">
+                    <button class="btn btn-primary" onclick="changeLocation('reception')">Главный вход</button>
+                    <button class="btn btn-primary" onclick="changeLocation('library')">Библиотека</button>
+                    <button class="btn btn-primary" onclick="changeLocation('cafeteria')">Столовая</button>
+                    <button class="btn btn-primary" onclick="changeLocation('gym')">Спортзал</button>
+                    <button class="btn btn-primary" onclick="changeLocation('lab')">Лаборатория</button>
+                </div>
+
+                <h2 class="section-title" style="margin-top: 3rem;">Все локации</h2>
+                <div class="tour-locations">
+                    <div class="location-card" onclick="changeLocation('reception')">
+                        <h3>🏛️ Главный вход и ресепшн</h3>
+                        <p>Встречайте гостей и студентов в просторном холле с информационными стендами</p>
+                    </div>
+                    <div class="location-card" onclick="changeLocation('library')">
+                        <h3>📚 Библиотека</h3>
+                        <p>Современная библиотека с читальным залом и компьютерными местами</p>
+                    </div>
+                    <div class="location-card" onclick="changeLocation('cafeteria')">
+                        <h3>🍽️ Столовая</h3>
+                        <p>Уютная столовая с разнообразным меню и комфортными зонами отдыха</p>
+                    </div>
+                    <div class="location-card" onclick="changeLocation('gym')">
+                        <h3>🏃 Спортивный зал</h3>
+                        <p>Просторный зал для занятий физкультурой и спортивных мероприятий</p>
+                    </div>
+                    <div class="location-card" onclick="changeLocation('lab')">
+                        <h3>🔬 Лаборатории</h3>
+                        <p>Современные лаборатории с новейшим оборудованием для практических занятий</p>
+                    </div>
+                    <div class="location-card" onclick="changeLocation('classroom')">
+                        <h3>💻 Учебные аудитории</h3>
+                        <p>Просторные аудитории с мультимедийным оборудованием</p>
+                    </div>
+                    <div class="location-card" onclick="changeLocation('workshop')">
+                        <h3>⚙️ Мастерские</h3>
+                        <p>Специализированные мастерские для практических занятий</p>
+                    </div>
+                    <div class="location-card" onclick="changeLocation('courtyard')">
+                        <h3>🌳 Внутренний двор</h3>
+                        <p>Благоустроенная территория для отдыха между занятиями</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Колледж</h3>
+                    <ul>
+                        <li><a href="#">Центр программирования и безопасности</a></li>
+                        <li><a href="#">Центр городских технологий</a></li>
+                        <li><a href="#">Центр IT.БИРЮЛЕВО</a></li>
+                        <li><a href="#">Дизайн колледж</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Комьюнити</h3>
+                    <ul>
+                        <li><a href="#">Проектное бюро</a></li>
+                        <li><a href="#">Студенческий совет</a></li>
+                        <li><a href="#">Кибер пространство</a></li>
+                        <li><a href="#">Дополнительное образование</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">VK</a>
+                        <a href="#" class="social-link">Telegram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 ГБПОУ МГКЭИТ</p>
+                <p>Разработка и дизайн - Колледж МГКЭИТ</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        const locations = {
+            reception: {
+                title: 'Главный вход и ресепшн',
+                description: 'Просторный холл с информационными стендами, где студенты и гости могут получить всю необходимую информацию о колледже.'
+            },
+            library: {
+                title: 'Библиотека',
+                description: 'Современная библиотека с обширным фондом учебной литературы, читальным залом и компьютерными местами для работы.'
+            },
+            cafeteria: {
+                title: 'Столовая',
+                description: 'Уютная столовая предлагает разнообразное меню и комфортные зоны для отдыха между занятиями.'
+            },
+            gym: {
+                title: 'Спортивный зал',
+                description: 'Просторный зал оборудован всем необходимым для занятий физкультурой и проведения спортивных мероприятий.'
+            },
+            lab: {
+                title: 'Лаборатории',
+                description: 'Современные лаборатории оснащены новейшим оборудованием для проведения практических занятий и исследований.'
+            },
+            classroom: {
+                title: 'Учебные аудитории',
+                description: 'Просторные аудитории с мультимедийным оборудованием создают комфортные условия для обучения.'
+            },
+            workshop: {
+                title: 'Мастерские',
+                description: 'Специализированные мастерские для практических занятий по различным направлениям подготовки.'
+            },
+            courtyard: {
+                title: 'Внутренний двор',
+                description: 'Благоустроенная территория с зонами отдыха, где студенты могут провести время между занятиями.'
+            }
+        };
+
+        function changeLocation(locationId) {
+            const location = locations[locationId];
+            const viewer = document.getElementById('tourViewer');
+            
+            viewer.innerHTML = `
+                <div style="text-align: center; width: 100%;">
+                    <h2 style="color: var(--primary-color); margin-bottom: 1rem;">${location.title}</h2>
+                    <div style="background: var(--bg-light); border-radius: 0.5rem; padding: 2rem; margin: 2rem 0; min-height: 300px; display: flex; align-items: center; justify-content: center; color: var(--text-light);">
+                        <div>
+                            <div style="font-size: 4rem; margin-bottom: 1rem;">📸</div>
+                            <p>360° панорама локации</p>
+                            <p style="margin-top: 0.5rem; font-size: 0.875rem;">${location.description}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Обновляем активную карточку
+            document.querySelectorAll('.location-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            event?.target.closest('.location-card')?.classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
